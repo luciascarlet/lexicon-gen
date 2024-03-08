@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:lexicon-gen}",
+			"name": "Debug lexicon-gen",
+			"program": "${workspaceFolder:lexicon-gen}/.build/debug/lexicon-gen",
+			"preLaunchTask": "swift: Build Debug lexicon-gen"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:lexicon-gen}",
+			"name": "Release lexicon-gen",
+			"program": "${workspaceFolder:lexicon-gen}/.build/release/lexicon-gen",
+			"preLaunchTask": "swift: Build Release lexicon-gen"
+		}
+	]
+}

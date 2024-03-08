@@ -17,6 +17,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-syntax.git", revision: "509.0.0"),
         .package(url: "https://github.com/pointfreeco/swift-custom-dump.git", from: "1.0.0"),
+//        .package(url: "https://github.com/Flight-School/AnyCodable", from: "0.6.0"),
     ],
     targets: [
         .executableTarget(

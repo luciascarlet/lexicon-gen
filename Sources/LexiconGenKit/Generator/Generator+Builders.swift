@@ -45,7 +45,7 @@ public extension Generator {
             }
         }
     }
-
+    
     @MemberBlockItemListBuilder
     static func definition(_ definition: SwiftDefinition<LexiconSchema<LexiconAbsoluteReference>>) throws -> MemberBlockItemListSyntax {
         switch definition.object {
@@ -267,7 +267,7 @@ private extension Generator {
             return "Union\(types.count)<\(types.joined(separator: ", "))>"
 
         case .unknown:
-            return "LexiconUnknownUnion"
+            return "[String: AnyCodable]"
 
         case .record:
             return nil
