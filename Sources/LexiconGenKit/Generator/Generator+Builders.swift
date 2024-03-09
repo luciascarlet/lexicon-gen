@@ -21,7 +21,7 @@ public extension Generator {
 
         // public typealias LexiconUnknownUnion = Union2<App.Bsky.Foo.RecordA, App.Bsky.Foo.RecordB>
         try TypeAliasDeclSyntax(
-            "public typealias LexiconUnknownUnion = Union\(raw: records.count)<\(raw: records.map(\.fullName).joined(separator: ", "))>"
+            "public typealias LexiconUnknownUnion = Union\(raw: records.count + 1)<\(raw: records.map(\.fullName).joined(separator: ", ")), [String: AnyCodable]>"
         )
 
         // public extension LexiconUnknownUnion {
@@ -267,7 +267,7 @@ private extension Generator {
             return "Union\(types.count)<\(types.joined(separator: ", "))>"
 
         case .unknown:
-            return "[String: AnyCodable]"
+            return "LexiconUnknownUnion"
 
         case .record:
             return nil

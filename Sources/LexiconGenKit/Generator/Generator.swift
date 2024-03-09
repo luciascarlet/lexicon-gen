@@ -21,7 +21,7 @@ public struct Generator {
 
             try Generator.namespaces(namespaces)
 
-//            try Generator.unknownUnion(from: definitions)
+           try Generator.unknownUnion(from: definitions)
 
             for definition in definitions {
                 try ExtensionDeclSyntax(
